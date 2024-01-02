@@ -34,6 +34,7 @@ For our lab environment, this creates clones of Ubuntu Cloud Images on ProxMoxan
 | 10. |  pihole.int.hackatorium.com |  12  |   2048   | [Pi-Hole](https://pi-hole.net/) DNS and ad-blocking                                                 |
 | 11. |    docs.int.hackatorium.com |  12  |   2048   | [Bookstack](https://www.bookstackapp.com/) Documentation                                            |
 | 12. |     soc.int.hackatorium.com |  12  |   2048   | [Wazuh](https://wazuh.com/) for SOC / [The Hive](https://thehive-project.org/) for IR               |
+| 31. |     cti.int.hackatorium.com |  12  |   2048   | [OpenCTI](https://opencti.io/) |
 
 > **NOTE:** This will use 25,476 GB of RAM if you do not choose "Ballooning" in ProxMox.
 
@@ -46,6 +47,7 @@ There is a VLAN 50 where these machines live, and DNS entries as follows:
 | backup.int.hackatorium.com       | 192.168.50.5    |
 | build.int.hackatorium.com        | 192.168.50.13   |
 | cloud.int.hackatorium.com        | 192.168.50.21   |
+| cti.int.hackatorium.com          | 192.168.50.32   |
 | *cyberchef.int.hackatorium.com*  | *192.168.50.23* |
 | docs.int.hackatorium.com         | 192.168.50.6    |
 | draw.int.hackatorium.com         | 192.168.50.24   |

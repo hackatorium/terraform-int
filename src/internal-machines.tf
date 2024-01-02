@@ -299,3 +299,28 @@ resource "proxmox_vm_qemu" "soc" {
   os_type = "cloud-init"
   scsihw = "virtio-scsi-pci"
 }
+
+###########
+# cti.int.hackatorium.com
+###########
+resource "proxmox_vm_qemu" "cti" {
+  target_node = "proxhack"
+  boot     = "order=scsi0"
+  bootdisk = "scsi0"
+  name     = "cti.int.hackatorium.com"
+  ipconfig0 = "ip=192.168.50.32/24,gw=192.168.50.1"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, cti"
+  clone    = "ubuntu-cloud-jammy"
+  agent    = 1
+  balloon  = 1024
+  memory   = 2048
+  cpu      = "host"
+  cores    = 12
+  sockets  = 1
+  onboot   = true
+  tablet   = false
+  force_create = false
+  full_clone = true
+  os_type = "cloud-init"
+  scsihw = "virtio-scsi-pci"
+}
