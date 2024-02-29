@@ -7,7 +7,7 @@ resource "proxmox_vm_qemu" "auth" {
   bootdisk = "scsi0"
   name     = "auth.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.2/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, auth, keycloak"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, auth, keycloak, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -32,7 +32,7 @@ resource "proxmox_vm_qemu" "git" {
   bootdisk = "scsi0"
   name     = "git.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.12/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, git, devops"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, git, devops, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -57,7 +57,7 @@ resource "proxmox_vm_qemu" "build" {
   bootdisk = "scsi0"
   name     = "build.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.13/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, build, devops"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, build, devops, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -82,7 +82,7 @@ resource "proxmox_vm_qemu" "backup" {
   bootdisk = "scsi0"
   name     = "backup.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.5/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, backup"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, backup, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -108,7 +108,7 @@ resource "proxmox_vm_qemu" "logging" {
   bootdisk = "scsi0"
   name     = "logging.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.4/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, logging, graylog"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, logging, graylog, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -133,7 +133,7 @@ resource "proxmox_vm_qemu" "status" {
   bootdisk = "scsi0"
   name     = "status.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.3/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, status, uptime-kuma"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, status, uptime-kuma, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -158,7 +158,7 @@ resource "proxmox_vm_qemu" "cloud" {
   bootdisk = "scsi0"
   name     = "cloud.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.21/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, cloud, nextcloud"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, cloud, nextcloud, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -183,7 +183,7 @@ resource "proxmox_vm_qemu" "draw" {
   bootdisk = "scsi0"
   name     = "draw.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.24/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, draw"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, draw, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -209,7 +209,7 @@ resource "proxmox_vm_qemu" "netboot" {
   bootdisk = "scsi0"
   name     = "netboot.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.7/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, netboot, pxe"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, netboot, pxe, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -234,7 +234,7 @@ resource "proxmox_vm_qemu" "pihole" {
   bootdisk = "scsi0"
   name     = "pihole.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.8/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, pihole, dns"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, pihole, dns, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -259,7 +259,7 @@ resource "proxmox_vm_qemu" "docs" {
   bootdisk = "scsi0"
   name     = "docs.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.6/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, docs, bookstack"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, docs, bookstack, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -284,7 +284,7 @@ resource "proxmox_vm_qemu" "soc" {
   bootdisk = "scsi0"
   name     = "soc.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.31/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, wazuh, the-hive"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, wazuh, the-hive, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
@@ -309,7 +309,7 @@ resource "proxmox_vm_qemu" "cti" {
   bootdisk = "scsi0"
   name     = "cti.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.32/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, cti"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, cti, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 4096
@@ -334,7 +334,7 @@ resource "proxmox_vm_qemu" "misp" {
   bootdisk = "scsi0"
   name     = "misp.int.hackatorium.com"
   ipconfig0 = "ip=192.168.50.33/24,gw=192.168.50.1"
-  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, misp"
+  tags     = "cloud-image, ubuntu, ubuntu-22.04, ubuntu-jammy, soc, misp, hackatorium.com"
   clone    = "ubuntu-cloud-jammy"
   agent    = 1
   balloon  = 1024
